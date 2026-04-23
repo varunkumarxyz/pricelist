@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aadeshwar Trading Corporation – Respite Bath Fittings</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #0d6e6e;
+    --teal-light: #14a0a0;
+    --teal-dark: #094d4d;
+    --gold: #c8a45a;
+    --gold-light: #e8c87a;
+    --cream: #faf7f2;
+    --dark: #0f1a1a;
+    --mid: #1e3030;
+    --text: #2a3a3a;
+    --muted: #6a8585;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  header {
+    background: var(--dark);
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 70% 40%, rgba(13,110,110,0.35) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(200,164,90,0.15) 0%, transparent 60%),
+      linear-gradient(160deg, #0f1a1a 0%, #0d2a2a 50%, #091515 100%);
+  }
+
+  .hero-pattern {
+    position: absolute; inset: 0;
+    background-image:
+      repeating-linear-gradient(90deg, rgba(13,110,110,0.04) 0, rgba(13,110,110,0.04) 1px, transparent 1px, transparent 60px),
+      repeating-linear-gradient(0deg, rgba(13,110,110,0.04) 0, rgba(13,110,110,0.04) 1px, transparent 1px, transparent 60px);
+  }
+
+  .topbar {
+    position: relative; z-index: 10;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 22px 60px;
+    border-bottom: 1px solid rgba(13,110,110,0.3);
+  }
+
+  .logo-block { display: flex; flex-direction: column; }
+  .logo-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+  }
+  .logo-sub {
+    font-size: 0.68rem; letter-spacing: 0.25em;
+    color: rgba(255,255,255,0.45); text-transform: uppercase;
+  }
+
+  nav { display: flex; gap: 36px; }
+  nav a {
+    color: rgba(255,255,255,0.65); text-decoration: none;
+    font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase;
+    transition: color .3s;
+  }
+  nav a:hover { color: var(--gold-light); }
+
+  .contact-pill {
+    background: var(--teal);
+    color: #fff; border: none; cursor: pointer;
+    padding: 9px 22px; border-radius: 30px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem; letter-spacing: 0.08em;
+    transition: background .3s;
+  }
+  .contact-pill:hover { background: var(--teal-light); }
+
+  .hero-content {
+    position: relative; z-index: 10;
+    flex: 1; display: flex; flex-direction: column;
+    justify-content: center; padding: 80px 60px 60px;
+    max-width: 900px;
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(13,110,110,0.25);
+    border: 1px solid rgba(13,110,110,0.5);
+    color: var(--teal-light); border-radius: 30px;
+    padding: 6px 16px; font-size: 0.72rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    margin-bottom: 32px; width: fit-content;
+    animation: fadeUp .8s ease both;
+  }
+  .hero-badge span { width: 6px; height: 6px; border-radius: 50%; background: var(--teal-light); }
+
+  .hero-h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 6vw, 5.5rem);
+    font-weight: 900; line-height: 1.05;
+    color: #fff; margin-bottom: 24px;
+    animation: fadeUp .9s .1s ease both;
+  }
+  .hero-h1 em { color: var(--gold); font-style: normal; }
+
+  .hero-desc {
+    font-size: 1.05rem; color: rgba(255,255,255,0.6);
+    max-width: 520px; line-height: 1.7;
+    animation: fadeUp .9s .2s ease both;
+    margin-bottom: 44px;
+  }
+
+  .hero-cta {
+    display: flex; gap: 16px; flex-wrap: wrap;
+    animation: fadeUp .9s .3s ease both;
+  }
+  .btn-primary {
+    background: var(--gold); color: var(--dark);
+    padding: 13px 32px; border-radius: 6px;
+    font-weight: 600; font-size: 0.88rem;
+    letter-spacing: 0.06em; text-decoration: none;
+    transition: all .3s;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-outline {
+    border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.8);
+    padding: 13px 32px; border-radius: 6px;
+    font-size: 0.88rem; letter-spacing: 0.06em; text-decoration: none;
+    transition: all .3s;
+  }
+  .btn-outline:hover { border-color: var(--teal-light); color: var(--teal-light); }
+
+  .hero-stats {
+    position: relative; z-index: 10;
+    display: flex; gap: 0;
+    padding: 0 60px 50px; border-top: 1px solid rgba(255,255,255,0.06);
+    margin-top: auto;
+    animation: fadeUp .9s .4s ease both;
+  }
+  .stat {
+    padding: 28px 48px 10px 0; margin-right: 48px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .stat:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; font-weight: 700; color: var(--gold);
+  }
+  .stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.4); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 4px; }
+
+  /* ── DIVIDER ── */
+  .divider { height: 4px; background: linear-gradient(90deg, var(--teal-dark), var(--gold), var(--teal-dark)); }
+
+  /* ── SECTIONS ── */
+  section { padding: 90px 60px; }
+  .section-label {
+    font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--teal); margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 700; color: var(--dark); margin-bottom: 12px;
+  }
+  .section-title span { color: var(--teal); }
+  .section-intro { color: var(--muted); font-size: 1rem; line-height: 1.7; max-width: 560px; margin-bottom: 52px; }
+
+  /* ── CATEGORY CARDS ── */
+  .categories { background: var(--cream); }
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+  }
+  .cat-card {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.07);
+    border-radius: 12px;
+    padding: 32px 24px;
+    cursor: pointer;
+    transition: all .3s;
+    position: relative; overflow: hidden;
+  }
+  .cat-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--teal), var(--gold));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform .3s;
+  }
+  .cat-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.10); }
+  .cat-card:hover::before { transform: scaleX(1); }
+  .cat-icon {
+    width: 52px; height: 52px; border-radius: 12px;
+    background: linear-gradient(135deg, rgba(13,110,110,0.1), rgba(13,110,110,0.05));
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 18px; font-size: 1.6rem;
+  }
+  .cat-name { font-weight: 600; font-size: 0.95rem; color: var(--dark); margin-bottom: 6px; }
+  .cat-count { font-size: 0.78rem; color: var(--muted); }
+
+  /* ── PRICE TABLE ── */
+  .prices { background: var(--mid); }
+  .prices .section-title { color: #fff; }
+  .prices .section-intro { color: rgba(255,255,255,0.5); }
+  .prices .section-label { color: var(--gold); }
+
+  .tab-row {
+    display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px;
+  }
+  .tab-btn {
+    padding: 8px 20px; border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: transparent; color: rgba(255,255,255,0.55);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem; cursor: pointer; letter-spacing: 0.06em;
+    transition: all .25s;
+  }
+  .tab-btn.active, .tab-btn:hover {
+    background: var(--teal); border-color: var(--teal); color: #fff;
+  }
+
+  .price-table-wrap {
+    border-radius: 14px; overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+  table { width: 100%; border-collapse: collapse; }
+  thead { background: rgba(13,110,110,0.35); }
+  thead th {
+    padding: 14px 20px; text-align: left;
+    font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--teal-light); font-weight: 600;
+  }
+  tbody tr {
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    transition: background .2s;
+  }
+  tbody tr:hover { background: rgba(13,110,110,0.12); }
+  tbody td {
+    padding: 13px 20px; font-size: 0.88rem;
+    color: rgba(255,255,255,0.75);
+  }
+  tbody td:first-child { color: #fff; font-weight: 500; }
+  .price-val {
+    color: var(--gold) !important; font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem !important;
+  }
+  .na { color: rgba(255,255,255,0.2) !important; font-style: italic; font-size: 0.78rem !important; }
+
+  /* ── INFO BAND ── */
+  .info-band {
+    background: linear-gradient(135deg, var(--teal-dark), var(--dark));
+    display: flex; gap: 0; padding: 0 60px;
+    border-top: 1px solid rgba(13,110,110,0.3);
+    border-bottom: 1px solid rgba(13,110,110,0.3);
+  }
+  .info-item {
+    flex: 1; padding: 40px 32px; border-right: 1px solid rgba(255,255,255,0.06);
+    display: flex; gap: 18px; align-items: flex-start;
+  }
+  .info-item:last-child { border-right: none; }
+  .info-ico {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: rgba(13,110,110,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem; flex-shrink: 0;
+  }
+  .info-text h4 { color: #fff; font-size: 0.9rem; font-weight: 600; margin-bottom: 4px; }
+  .info-text p { color: rgba(255,255,255,0.4); font-size: 0.8rem; line-height: 1.5; }
+
+  /* ── CONTACT ── */
+  .contact-section { background: var(--cream); }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+    align-items: start;
+  }
+  .contact-card {
+    background: var(--dark); border-radius: 16px;
+    padding: 44px; position: relative; overflow: hidden;
+  }
+  .contact-card::after {
+    content: '';
+    position: absolute; bottom: -40px; right: -40px;
+    width: 180px; height: 180px; border-radius: 50%;
+    border: 40px solid rgba(13,110,110,0.12);
+  }
+  .contact-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold); font-size: 1.4rem; margin-bottom: 24px;
+  }
+  .contact-line {
+    display: flex; gap: 14px; align-items: flex-start;
+    margin-bottom: 18px;
+  }
+  .contact-line-icon { color: var(--teal-light); font-size: 1.1rem; margin-top: 2px; }
+  .contact-line-text { color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.6; }
+  .contact-line-text strong { color: #fff; display: block; margin-bottom: 2px; }
+
+  .bank-card {
+    background: #fff; border-radius: 16px; padding: 44px;
+    border: 1px solid rgba(0,0,0,0.07);
+  }
+  .bank-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--teal-dark); font-size: 1.4rem; margin-bottom: 24px;
+  }
+  .bank-row {
+    display: flex; justify-content: space-between;
+    padding: 12px 0; border-bottom: 1px dashed rgba(0,0,0,0.08);
+    font-size: 0.88rem;
+  }
+  .bank-row:last-child { border-bottom: none; }
+  .bank-row span:first-child { color: var(--muted); }
+  .bank-row span:last-child { color: var(--dark); font-weight: 600; }
+
+  .terms-list { list-style: none; }
+  .terms-list li {
+    padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.06);
+    font-size: 0.85rem; color: var(--muted);
+    display: flex; gap: 10px; align-items: flex-start;
+  }
+  .terms-list li::before { content: '▸'; color: var(--teal); flex-shrink: 0; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark); padding: 32px 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .footer-copy { color: rgba(255,255,255,0.3); font-size: 0.8rem; }
+  .footer-wef {
+    background: rgba(13,110,110,0.25); color: var(--teal-light);
+    padding: 6px 18px; border-radius: 30px;
+    font-size: 0.75rem; letter-spacing: 0.12em;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .topbar, section, .info-band, footer { padding-left: 24px; padding-right: 24px; }
+    nav { display: none; }
+    .hero-content { padding: 60px 24px 40px; }
+    .hero-stats { padding: 0 24px 40px; flex-wrap: wrap; gap: 0; }
+    .stat { padding: 20px 32px 10px 0; margin-right: 32px; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .info-band { flex-direction: column; padding: 0 24px; }
+    .info-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  }
+  @media (max-width: 600px) {
+    .hero-h1 { font-size: 2.2rem; }
+    section { padding: 60px 20px; }
+  }
+
+  /* tabs content hide/show */
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header>
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+
+  <div class="topbar">
+    <div class="logo-block">
+      <div class="logo-name">Aadeshwar Trading Corporation</div>
+      <div class="logo-sub">Authorised Distributor WaterJone</div>
+    </div>
+    <nav>
+      <a href="#categories">Products</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="contact-pill" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get in Touch</button>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge"><span></span> W.E.F. 15 January 2026</div>
+    <h1 class="hero-h1">Premium Bath<br>Fittings &amp; <em>Faucets</em></h1>
+    <p class="hero-desc">
+      Complete range of CP bath fittings, health faucets, shower systems, waste couplings, garden hoses, and accessories. ISO 9001:2015 certified products from Respite, Waterflo &amp; Orient Plast.
+    </p>
+    <div class="hero-cta">
+      <a href="#pricing" class="btn-primary">View Price List</a>
+      <a href="#categories" class="btn-outline">Browse Products</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">14+</div>
+      <div class="stat-label">Product Pages</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100+</div>
+      <div class="stat-label">SKUs Listed</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">30</div>
+      <div class="stat-label">Days Credit</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">ISO</div>
+      <div class="stat-label">9001:2015 Certified</div>
+    </div>
+  </div>
+</header>
+
+<div class="divider"></div>
+
+<!-- ═══ CATEGORIES ═══ -->
+<section class="categories" id="categories">
+  <div class="section-label">What We Carry</div>
+  <h2 class="section-title">Product <span>Categories</span></h2>
+  <p class="section-intro">From chrome pillar cocks to garden hoses — a comprehensive range for residential and commercial plumbing.</p>
+  <div class="cat-grid">
+    <div class="cat-card" onclick="switchTab('cp')">
+      <div class="cat-icon">🚿</div>
+      <div class="cat-name">CP Faucets &amp; Mixers</div>
+      <div class="cat-count">Short/Long Body, Pillar Cock, Sink Cock, Mixers…</div>
+    </div>
+    <div class="cat-card" onclick="switchTab('health')">
+      <div class="cat-icon">💧</div>
+      <div class="cat-name">Health Faucets</div>
+      <div class="cat-count">SS Chrome &amp; PVC — Megna, Alexa, Jaco, Jordan…</div>
+    </div>
+    <div class="cat-card" onclick="switchTab('shower')">
+      <div class="cat-icon">🌧️</div>
+      <div class="cat-name">Shower Sets &amp; Arms</div>
+      <div class="cat-count">4" Shower Sets, Overhead Showers, Square &amp; Round Arms…</div>
+    </div>
+    <div class="cat-card" onclick="switchTab('grating')">
+      <div class="cat-icon">🔩</div>
+      <div class="cat-name">SS Grating</div>
+      <div class="cat-count">Cockroach Jali, Frame Lock, Pop-Up, Shower Grating…</div>
+    </div>
+    <div class="cat-card" onclick="switchTab('waste')">
+      <div class="cat-icon">🔗</div>
+      <div class="cat-name">Waste Couplings</div>
+      <div class="cat-count">SS Waste, Sink Waste (Nova, Super, Classic), Towel Rods…</div>
+    </div>
+    <div class="cat-card" onclick="switchTab('connection')">
+      <div class="cat-icon">🪛</div>
+      <div class="cat-name">Connection Hose &amp; Valves</div>
+      <div class="cat-count">SS Gre Wire, SS Hexa, PTMT Hose, Ball Valves…</div>
+    </div>
+    <div class="cat-card" onclick="switchTab('ptmt')">
+      <div class="cat-icon">🪠</div>
+      <div class="cat-name">P.T.M.T. Taps</div>
+      <div class="cat-count">Premium &amp; Royal Prime Series — Short/Long Body, Swan Neck…</div>
+    </div>
+    <div class="cat-card" onclick="switchTab('hose')">
+      <div class="cat-icon">🌿</div>
+      <div class="cat-name">Garden Hose</div>
+      <div class="cat-count">Green Braided, White Braided, Zebra, Blue, Suction Hose…</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRICING ═══ -->
+<section class="prices" id="pricing">
+  <div class="section-label">Rate List · W.E.F. 15.01.2026</div>
+  <h2 class="section-title" style="color:#fff">Current <span style="color:var(--gold)">Price List</span></h2>
+  <p class="section-intro">All prices in ₹. Freight &amp; forwarding charges extra. Credit period 30 days.</p>
+
+  <div class="tab-row">
+    <button class="tab-btn active" onclick="switchTab('cp')">CP Faucets</button>
+    <button class="tab-btn" onclick="switchTab('health')">Health Faucets</button>
+    <button class="tab-btn" onclick="switchTab('shower')">Showers</button>
+    <button class="tab-btn" onclick="switchTab('grating')">SS Grating</button>
+    <button class="tab-btn" onclick="switchTab('waste')">Waste Coupling</button>
+    <button class="tab-btn" onclick="switchTab('connection')">Connection Hose</button>
+    <button class="tab-btn" onclick="switchTab('ptmt')">P.T.M.T. Taps</button>
+    <button class="tab-btn" onclick="switchTab('hose')">Garden Hose</button>
+  </div>
+
+  <!-- CP FAUCETS -->
+  <div class="tab-content active" id="tab-cp">
+    <div class="price-table-wrap">
+      <table>
+        <thead><tr>
+          <th>Product</th><th>Boost (₹)</th><th>Arc (₹)</th><th>Fusion (₹)</th><th>Pioneer (₹)</th><th>Pkg</th>
+        </tr></thead>
+        <tbody>
+          <tr><td>Short Body</td><td class="price-val">385</td><td class="price-val">390</td><td class="price-val">430</td><td class="price-val">475</td><td>2 PC</td></tr>
+          <tr><td>Long Body</td><td class="price-val">430</td><td class="price-val">435</td><td class="price-val">490</td><td class="price-val">510</td><td>2 PC</td></tr>
+          <tr><td>Angle Cock</td><td class="price-val">330</td><td class="price-val">330</td><td class="price-val">345</td><td class="price-val">475</td><td>2 PC</td></tr>
+          <tr><td>Pillar Cock</td><td class="price-val">500</td><td class="price-val">540</td><td class="price-val">475</td><td class="price-val">545</td><td>2 PC</td></tr>
+          <tr><td>Pillar Cock 6" SPL</td><td class="na">—</td><td class="price-val">700</td><td class="price-val">720</td><td class="na">—</td><td>1 PC</td></tr>
+          <tr><td>Pillar Cock 12"</td><td class="na">—</td><td class="price-val">1425</td><td class="price-val">1425</td><td class="na">—</td><td>1 PC</td></tr>
+          <tr><td>Sink Cock</td><td class="price-val">550</td><td class="price-val">585</td><td class="price-val">605</td><td class="price-val">610</td><td>1 PC</td></tr>
+          <tr><td>Sink Cock Black Flexible Spout</td><td class="na">—</td><td class="price-val">1050</td><td class="price-val">1050</td><td class="na">—</td><td>1 PC</td></tr>
+          <tr><td>Sink Cock Black Flexible Twist</td><td class="na">—</td><td class="na">—</td><td class="price-val">1150</td><td class="na">—</td><td>1 PC</td></tr>
+          <tr><td>Swan Neck</td><td class="price-val">600</td><td class="price-val">630</td><td class="price-val">570</td><td class="price-val">672</td><td>1 PC</td></tr>
+          <tr><td>2 Way Angle Cock</td><td class="price-val">605</td><td class="price-val">680</td><td class="price-val">700</td><td class="price-val">710</td><td>1 PC</td></tr>
+          <tr><td>2 Way Bib Cock</td><td class="price-val">655</td><td class="price-val">750</td><td class="price-val">810</td><td class="price-val">800</td><td>1 PC</td></tr>
+          <tr><td>2 in 1 Wall Mixer with L Bend</td><td class="price-val">2160</td><td class="price-val">2540</td><td class="price-val">2580</td><td class="price-val">2700</td><td>1 PC</td></tr>
+          <tr><td>3 in 1 Wall Mixer with L Bend</td><td class="na">—</td><td class="price-val">3220</td><td class="price-val">3265</td><td class="price-val">3400</td><td>1 PC</td></tr>
+          <tr><td>Center Hole Basin Mixer</td><td class="price-val">1550</td><td class="na">—</td><td class="na">—</td><td class="na">—</td><td>1 PC</td></tr>
+          <tr><td>Washing Machine Taps</td><td class="price-val">445</td><td class="price-val">425</td><td class="price-val">465</td><td class="price-val">510</td><td>2 PC</td></tr>
+          <tr><td>Nozzle Tap Bib Cock</td><td class="price-val">445</td><td class="price-val">475</td><td class="na">—</td><td class="na">—</td><td>2 PC</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- HEALTH FAUCETS -->
+  <div class="tab-content" id="tab-health">
+    <div class="price-table-wrap">
+      <table>
+        <thead><tr><th>Model</th><th>Code</th><th>Size</th><th>Rate (₹)</th><th>Gun (₹)</th><th>Type</th></tr></thead>
+        <tbody>
+          <tr><td>Megna</td><td>1613A</td><td>1.5 Mtr</td><td class="price-val">400</td><td class="price-val">200</td><td>SS Chrome</td></tr>
+          <tr><td>Alexa</td><td>1647</td><td>1.5 Mtr</td><td class="price-val">710</td><td class="price-val">450</td><td>SS Chrome</td></tr>
+          <tr><td>New Conti</td><td>1627</td><td>1.5 Mtr</td><td class="price-val">350</td><td class="price-val">120</td><td>SS Chrome</td></tr>
+          <tr><td>Jaco</td><td>1644</td><td>1.5 Mtr</td><td class="price-val">150</td><td class="price-val">75</td><td>PVC</td></tr>
+          <tr><td>Jordan</td><td>1645</td><td>1.5 Mtr</td><td class="price-val">160</td><td class="na">—</td><td>PVC</td></tr>
+          <tr><td>Jordan (Gun Only)</td><td>1645</td><td>Gun Only</td><td class="price-val">75</td><td class="na">—</td><td>PVC</td></tr>
+          <tr><td>Dezire</td><td>1596</td><td>1.5 Mtr</td><td class="price-val">470</td><td class="na">—</td><td>SS Chrome Hand Shower</td></tr>
+          <tr><td>Nexa</td><td>1590</td><td>1.5 Mtr</td><td class="price-val">535</td><td class="na">—</td><td>SS Chrome Hand Shower</td></tr>
+          <tr><td>Panda</td><td>1591</td><td>1.5 Mtr</td><td class="price-val">590</td><td class="na">—</td><td>SS Chrome Hand Shower</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SHOWERS -->
+  <div class="tab-content" id="tab-shower">
+    <div class="price-table-wrap">
+      <table>
+        <thead><tr><th>Product / Model</th><th>Size</th><th>Rate (₹)</th><th>Code</th></tr></thead>
+        <tbody>
+          <tr><td>4" Shower Set – Aldo</td><td>9" ARM</td><td class="price-val">250</td><td>1518</td></tr>
+          <tr><td>4" Shower Set – Prince</td><td>9" ARM</td><td class="price-val">250</td><td>1550A</td></tr>
+          <tr><td>4" Shower Set – Cuba</td><td>9" ARM</td><td class="price-val">250</td><td>1516</td></tr>
+          <tr><td>4" Shower Set – Platina</td><td>9" ARM</td><td class="price-val">250</td><td>1551A</td></tr>
+          <tr><td>4" Shower Set – Vista</td><td>9" ARM</td><td class="price-val">390</td><td>1548B</td></tr>
+          <tr><td>4" Shower Set – Galaxy</td><td>9" ARM</td><td class="price-val">260</td><td>1520</td></tr>
+          <tr><td>Overhead Shower Ultra Slim (4")</td><td>4"</td><td class="price-val">140</td><td>—</td></tr>
+          <tr><td>Overhead Shower Ultra Slim (6")</td><td>6"</td><td class="price-val">235</td><td>—</td></tr>
+          <tr><td>Overhead Shower Ultra Slim (8")</td><td>8"</td><td class="price-val">330</td><td>—</td></tr>
+          <tr><td>Overhead Shower Ultra Slim (10")</td><td>10"</td><td class="price-val">790</td><td>—</td></tr>
+          <tr><td>Overhead Shower Ultra Slim (12")</td><td>12"</td><td class="price-val">905</td><td>—</td></tr>
+          <tr><td>Overhead Square Core (6")</td><td>6"</td><td class="price-val">360</td><td>—</td></tr>
+          <tr><td>Overhead Square Core (8")</td><td>8"</td><td class="price-val">505</td><td>—</td></tr>
+          <tr><td>Overhead Square Elegant (6")</td><td>6"</td><td class="price-val">520</td><td>—</td></tr>
+          <tr><td>Overhead Square Elegant (8")</td><td>8"</td><td class="price-val">680</td><td>—</td></tr>
+          <tr><td>Overhead Square Vista (6")</td><td>6"</td><td class="price-val">550</td><td>—</td></tr>
+          <tr><td>Square Arm (9"–24")</td><td>9"–24"</td><td class="price-val">175–335</td><td>—</td></tr>
+          <tr><td>Round Arm (9"–18")</td><td>9"–18"</td><td class="price-val">90–250</td><td>—</td></tr>
+          <tr><td>Rectangular Arm (12")</td><td>12"</td><td class="price-val">200</td><td>—</td></tr>
+          <tr><td>8" Shower Round Aston Ultra Slim</td><td>8"</td><td class="price-val">225</td><td>6151R</td></tr>
+          <tr><td>8" Shower Square Aston Ultra Slim</td><td>8"</td><td class="price-val">250</td><td>6101</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- GRATING -->
+  <div class="tab-content" id="tab-grating">
+    <div class="price-table-wrap">
+      <table>
+        <thead><tr><th>Product</th><th>Code</th><th>Plan (₹)</th><th>Hole (₹)</th></tr></thead>
+        <tbody>
+          <tr><td>5x5 Cockroach Jali Round</td><td>1707</td><td class="price-val">180</td><td class="na">—</td></tr>
+          <tr><td>5x5 Cockroach Jali Square</td><td>1706</td><td class="price-val">250</td><td class="na">—</td></tr>
+          <tr><td>5x5 Liner Grating Square</td><td>1710</td><td class="price-val">125</td><td class="price-val">125</td></tr>
+          <tr><td>5x5 Ultra Grating Square</td><td>1708</td><td class="price-val">125</td><td class="na">—</td></tr>
+          <tr><td>5x5 Frame Lock Square</td><td>1716</td><td class="price-val">92</td><td class="price-val">86</td></tr>
+          <tr><td>5x5 Frame Lock Round</td><td>1715</td><td class="price-val">62</td><td class="price-val">60</td></tr>
+          <tr><td>Round Grating</td><td>1713</td><td class="price-val">34</td><td class="price-val">33</td></tr>
+          <tr><td>Slate Grating 4x4</td><td>1731A</td><td class="price-val">100</td><td class="na">—</td></tr>
+          <tr><td>Slate Grating 5x5</td><td>1731B</td><td class="price-val">130</td><td class="na">—</td></tr>
+          <tr><td>5x5 Pop-Up Grating</td><td>1711</td><td class="price-val">810</td><td class="na">—</td></tr>
+          <tr><td>5x5 Marble / Tile Grating</td><td>1705A</td><td class="price-val">800</td><td class="na">—</td></tr>
+          <tr><td>Shower Grating 4x12 – Ultra</td><td>1702A</td><td class="price-val">1290</td><td class="na">—</td></tr>
+          <tr><td>Shower Grating 4x12 – Liner</td><td>1701A</td><td class="price-val">1290</td><td class="na">—</td></tr>
+          <tr><td>Shower Grating 4x12 – Waves</td><td>1703A</td><td class="price-val">1290</td><td class="na">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- WASTE COUPLING -->
+  <div class="tab-content" id="tab-waste">
+    <div class="price-table-wrap">
+      <table>
+        <thead><tr><th>Product</th><th>Code</th><th>Rate (₹)</th><th>Pkg</th></tr></thead>
+        <tbody>
+          <tr><td>Waste Coupling 4"</td><td>1810</td><td class="price-val">125</td><td>—</td></tr>
+          <tr><td>Waste Coupling 6"</td><td>1811</td><td class="price-val">178</td><td>—</td></tr>
+          <tr><td>Waste Coupling Pop-Up 4"</td><td>WC-1818</td><td class="price-val">240</td><td>—</td></tr>
+          <tr><td>SS Sink Waste Coupling – Nova</td><td>1902</td><td class="price-val">140</td><td>—</td></tr>
+          <tr><td>SS Sink Waste Coupling – Super</td><td>1903</td><td class="price-val">118</td><td>—</td></tr>
+          <tr><td>SS Sink Waste Coupling Heavy – Classic</td><td>1900</td><td class="price-val">170</td><td>—</td></tr>
+          <tr><td>SS Sink Waste Square – Classic</td><td>1900</td><td class="price-val">145</td><td>—</td></tr>
+          <tr><td>Towel Rod – Cubix Square 18"</td><td>1206A</td><td class="price-val">235</td><td>10 PC</td></tr>
+          <tr><td>Towel Rod – Cubix Square 24"</td><td>1206B</td><td class="price-val">245</td><td>8 PC</td></tr>
+          <tr><td>Towel Rod – Tarzan Round 18"</td><td>1205A</td><td class="price-val">265</td><td>10 PC</td></tr>
+          <tr><td>Towel Rod – Tarzan Round 24"</td><td>1205B</td><td class="price-val">275</td><td>8 PC</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- CONNECTION HOSE -->
+  <div class="tab-content" id="tab-connection">
+    <div class="price-table-wrap">
+      <table>
+        <thead><tr><th>Product</th><th>Size</th><th>Rate (₹)</th><th>Pkg</th></tr></thead>
+        <tbody>
+          <tr><td>SS Gre Wire Connection Hose</td><td>18"</td><td class="price-val">78</td><td>24 PC</td></tr>
+          <tr><td>SS Gre Wire Connection Hose</td><td>24"</td><td class="price-val">86</td><td>24 PC</td></tr>
+          <tr><td>SS Gre Wire Connection Hose</td><td>30"</td><td class="price-val">103</td><td>12 PC</td></tr>
+          <tr><td>SS Gre Wire Connection Hose</td><td>36"</td><td class="price-val">112</td><td>12 PC</td></tr>
+          <tr><td>SS Hexa Connection Hose</td><td>18"</td><td class="price-val">110</td><td>24 PC</td></tr>
+          <tr><td>SS Hexa Connection Hose</td><td>24"</td><td class="price-val">120</td><td>24 PC</td></tr>
+          <tr><td>SS Hexa Connection Hose</td><td>30"</td><td class="price-val">135</td><td>12 PC</td></tr>
+          <tr><td>SS Hexa Connection Hose</td><td>36"</td><td class="price-val">160</td><td>12 PC</td></tr>
+          <tr><td>P.T.M.T. Connection Hose</td><td>18"</td><td class="price-val">50</td><td>24 PC</td></tr>
+          <tr><td>P.T.M.T. Connection Hose</td><td>24"</td><td class="price-val">55</td><td>24 PC</td></tr>
+          <tr><td>P.T.M.T. Connection Hose</td><td>30"</td><td class="price-val">65</td><td>12 PC</td></tr>
+          <tr><td>P.T.M.T. Connection Hose</td><td>36"</td><td class="price-val">70</td><td>12 PC</td></tr>
+          <tr><td>SS Mini Angle Valve – Fusion</td><td>—</td><td class="price-val">130</td><td>50/1 PC (4005)</td></tr>
+          <tr><td>SS Mini Angle Valve – Turbo</td><td>—</td><td class="price-val">180</td><td>40/1 PC (4008)</td></tr>
+          <tr><td>SS Mini Angle Valve – Primax</td><td>—</td><td class="price-val">190</td><td>40/1 PC (4009H)</td></tr>
+          <tr><td>Brass Ball Valve 1/2"</td><td>1/2"</td><td class="price-val">210</td><td>2 PC</td></tr>
+          <tr><td>Brass Ball Valve 3/4"</td><td>3/4"</td><td class="price-val">290</td><td>2 PC</td></tr>
+          <tr><td>Brass Ball Valve 1"</td><td>1"</td><td class="price-val">410</td><td>2 PC</td></tr>
+          <tr><td>Brass Ball Valve 1¼"</td><td>1¼"</td><td class="price-val">925</td><td>2 PC</td></tr>
+          <tr><td>Brass Ball Valve 1½"</td><td>1½"</td><td class="price-val">1150</td><td>2 PC</td></tr>
+          <tr><td>Brass Ball Valve 2"</td><td>2"</td><td class="price-val">1860</td><td>2 PC</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- PTMT TAPS -->
+  <div class="tab-content" id="tab-ptmt">
+    <div class="price-table-wrap">
+      <table>
+        <thead><tr><th>Product</th><th>Code</th><th>Rate (₹)</th><th>Pkg</th><th>Series</th></tr></thead>
+        <tbody>
+          <tr><td>Short Body Tap</td><td>PRS-301</td><td class="price-val">94</td><td>24 PC</td><td>Premium</td></tr>
+          <tr><td>Long Body Tap</td><td>PRS-302</td><td class="price-val">103</td><td>24 PC</td><td>Premium</td></tr>
+          <tr><td>Nozzle Tap</td><td>PRS-305</td><td class="price-val">151</td><td>12 PC</td><td>Premium</td></tr>
+          <tr><td>Angle Cock</td><td>PRS-306</td><td class="price-val">94</td><td>24 PC</td><td>Premium</td></tr>
+          <tr><td>Pillar Tap</td><td>PRS-308</td><td class="price-val">207</td><td>24 PC</td><td>Premium</td></tr>
+          <tr><td>2 Way Bib Cock</td><td>PRS-307</td><td class="price-val">248</td><td>12 PC</td><td>Premium</td></tr>
+          <tr><td>2 Way Angle Cock</td><td>PRS-311</td><td class="price-val">238</td><td>12 PC</td><td>Premium</td></tr>
+          <tr><td>Swan Neck</td><td>PRS-309</td><td class="price-val">225</td><td>6 PC</td><td>Premium</td></tr>
+          <tr><td>Swan Neck Long Spout</td><td>PRS-313</td><td class="price-val">264</td><td>6 PC</td><td>Premium</td></tr>
+          <tr><td>Sink Cock</td><td>PRS-310</td><td class="price-val">216</td><td>25 PC</td><td>Premium</td></tr>
+          <tr><td>Sink Cock Long Spout</td><td>PRS-312</td><td class="price-val">254</td><td>12 PC</td><td>Premium</td></tr>
+          <tr><td>Wall Mixture with L-Bend</td><td>PRS-315</td><td class="price-val">1025</td><td>1 PC</td><td>Premium</td></tr>
+          <tr><td>Short Body Tap</td><td>RPS-1301</td><td class="price-val">105</td><td>24 PC</td><td>Royal Prime</td></tr>
+          <tr><td>Long Body Tap</td><td>RPS-1302</td><td class="price-val">114</td><td>24 PC</td><td>Royal Prime</td></tr>
+          <tr><td>Nozzle Tap</td><td>RPS-1303</td><td class="price-val">155</td><td>12 PC</td><td>Royal Prime</td></tr>
+          <tr><td>Angle Cock</td><td>RPS-1304</td><td class="price-val">105</td><td>24 PC</td><td>Royal Prime</td></tr>
+          <tr><td>Pillar Tap</td><td>RPS-1306</td><td class="price-val">128</td><td>24 PC</td><td>Royal Prime</td></tr>
+          <tr><td>2 Way Bib Cock</td><td>RPS-1305</td><td class="price-val">225</td><td>12 PC</td><td>Royal Prime</td></tr>
+          <tr><td>2 Way Angle Cock</td><td>RPS-1309</td><td class="price-val">215</td><td>12 PC</td><td>Royal Prime</td></tr>
+          <tr><td>Swan Neck Long Spout</td><td>RPS-1311</td><td class="price-val">260</td><td>6 PC</td><td>Royal Prime</td></tr>
+          <tr><td>Sink Cock Long Spout</td><td>RPS-1310</td><td class="price-val">250</td><td>6 PC</td><td>Royal Prime</td></tr>
+          <tr><td>Wall Mixture with L-Bend</td><td>RPS-1312</td><td class="price-val">1040</td><td>1 PC</td><td>Royal Prime</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- GARDEN HOSE -->
+  <div class="tab-content" id="tab-hose">
+    <div class="price-table-wrap">
+      <table>
+        <thead><tr><th>Type</th><th>Size 3/4"</th><th>Size 1"</th><th>Per Roll</th></tr></thead>
+        <tbody>
+          <tr><td>Green Braided</td><td class="price-val">₹625</td><td class="price-val">₹978</td><td>—</td></tr>
+          <tr><td>White Braided</td><td class="price-val">₹700</td><td class="price-val">₹1090</td><td>—</td></tr>
+          <tr><td>Colour Hose</td><td class="price-val">₹480</td><td class="price-val">₹778</td><td>—</td></tr>
+          <tr><td>Zebra Hose</td><td class="price-val">₹527</td><td class="price-val">₹818</td><td>—</td></tr>
+          <tr><td>Blue Hose</td><td class="price-val">₹584</td><td class="price-val">₹820</td><td>—</td></tr>
+          <tr><td>Blue Metallic</td><td class="price-val">₹745</td><td class="price-val">₹1190</td><td>—</td></tr>
+          <tr><td>Super Tuff</td><td class="price-val">₹811</td><td class="price-val">₹1235</td><td>—</td></tr>
+          <tr><td>White Hose</td><td class="price-val">₹625</td><td class="price-val">₹1040</td><td>—</td></tr>
+          <tr><td>Indus Hose</td><td class="price-val">₹990</td><td class="price-val">₹1480</td><td>—</td></tr>
+          <tr><td>White Braided (H)</td><td class="price-val">₹1090</td><td class="price-val">₹1535</td><td>—</td></tr>
+          <tr><td>Green Suction Hose (3/4")</td><td class="price-val" colspan="2">₹582 / 30 Mtr roll</td><td>30 Mtr</td></tr>
+          <tr><td>Green Suction Hose (1")</td><td class="price-val" colspan="2">₹706 / 30 Mtr roll</td><td>30 Mtr</td></tr>
+          <tr><td>Green Suction Hose (2")</td><td class="price-val" colspan="2">₹2210 / 30 Mtr roll</td><td>30 Mtr</td></tr>
+          <tr><td>Suction Hose Super Blue (3/4")</td><td class="price-val">₹819</td><td class="price-val">₹1075</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INFO BAND ═══ -->
+<div class="info-band">
+  <div class="info-item">
+    <div class="info-ico">🚚</div>
+    <div class="info-text">
+      <h4>Freight Extra</h4>
+      <p>Freight &amp; forwarding charges are not included in the listed price.</p>
+    </div>
+  </div>
+  <div class="info-item">
+    <div class="info-ico">📅</div>
+    <div class="info-text">
+      <h4>30-Day Credit</h4>
+      <p>Credit period of 30 days from invoice date.</p>
+    </div>
+  </div>
+  <div class="info-item">
+    <div class="info-ico">🔒</div>
+    <div class="info-text">
+      <h4>No Returns</h4>
+      <p>Material once dispatched cannot be taken back or exchanged.</p>
+    </div>
+  </div>
+  <div class="info-item">
+    <div class="info-ico">⚖️</div>
+    <div class="info-text">
+      <h4>Chennai Jurisdiction</h4>
+      <p>All transactions subject to Chennai jurisdiction only.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CONTACT ═══ -->
+<section class="contact-section" id="contact">
+  <div class="section-label">Get In Touch</div>
+  <h2 class="section-title">Contact &amp; <span>Bank Details</span></h2>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h3>Balaji Pipe Corporation</h3>
+      <div class="contact-line">
+        <span class="contact-line-icon">📍</span>
+        <div class="contact-line-text">
+          <strong>Address</strong>
+          No. 31, Kanniamman Nagar, Vadaperumabakam,<br>Madhavaram, Chennai – 60
+        </div>
+      </div>
+      <div class="contact-line">
+        <span class="contact-line-icon">📞</span>
+        <div class="contact-line-text">
+          <strong>Phone</strong>
+          9962165098 &nbsp;·&nbsp; 7990903688<br>9016175451 &nbsp;·&nbsp; 8320197530
+        </div>
+      </div>
+      <div class="contact-line">
+        <span class="contact-line-icon">🏛️</span>
+        <div class="contact-line-text">
+          <strong>Legal</strong>
+          All transactions subject to Chennai Jurisdiction
+        </div>
+      </div>
+      <ul class="terms-list" style="margin-top:20px">
+        <li>Material once dispatched cannot be taken back or exchanged</li>
+        <li>Credit period 30 days only</li>
+        <li>Freight and forwarding charges will be extra</li>
+      </ul>
+    </div>
+
+    <div class="bank-card">
+      <h3>Bank Account Details</h3>
+      <div class="bank-row"><span>Account Name</span><span>Aadeshear TradingCorporation</span></div>
+      <div class="bank-row"><span>Bank</span><span>SBI BANK</span></div>
+      <div class="bank-row"><span>Account No.</span><span>41250774289</span></div>
+      <div class="bank-row"><span>IFSC Code</span><span>SBIN0014623</span></div>
+      <div class="bank-row"><span>Branch</span><span>Vadaperumbakam</span></div>
+      <div style="margin-top:32px; padding:20px; background:rgba(13,110,110,0.07); border-radius:10px; border-left:3px solid var(--teal)">
+        <p style="font-size:0.82rem; color:var(--muted); line-height:1.6">
+          <strong style="color:var(--teal-dark)">Authorized Distributor</strong><br>
+          Respite Feel Water &nbsp;·&nbsp; Orient Plast (PVC Pipes &amp; Fittings) &nbsp;·&nbsp; Waterflo Taps &amp; Bath Fittings
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-copy">© 2026 Aadeshwar Trading Corporation, Chennai. All rights reserved.</div>
+  <div class="footer-wef">Price List W.E.F. 15.01.2026</div>
+</footer>
+
+<script>
+  function switchTab(name) {
+    // update tab buttons
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    const idx = ['cp','health','shower','grating','waste','connection','ptmt','hose'].indexOf(name);
+    const btns = document.querySelectorAll('.tab-btn');
+    if (btns[idx]) btns[idx].classList.add('active');
+
+    // update tab content
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    const target = document.getElementById('tab-' + name);
+    if (target) target.classList.add('active');
+
+    // scroll to pricing
+    document.getElementById('pricing').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+</script>
+
+</body>
+</html>
